@@ -23,9 +23,9 @@ d3.json(url).then(function (data) {
 function metadata(x) {
     d3.json(url).then(function (data) {
         var bellydata = data.metadata;
-        let resultArray = bellydata.filter(y => y.id == x);
+        let resultlist = bellydata.filter(y => y.id == x);
 
-        let results = resultArray[0];
+        let results = resultlist[0];
         console.log(results);
 
 
@@ -39,9 +39,9 @@ function metadata(x) {
 function makecharts(x) {
     d3.json(url).then(function (data) {
         var samples = data.samples;
-        let resultArray = samples.filter(y => y.id == x);
+        let resultlist = samples.filter(y => y.id == x);
 
-        let results = resultArray[0];
+        let results = resultlist[0];
         console.log(results);
 
         let otu_ids = results.otu_ids;
